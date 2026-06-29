@@ -2,7 +2,7 @@
 
 A clean, minimal, and fully responsive single-page personal website template — ideal for researchers, academics, and developers who want to share their publications, projects, and talks online.
 
-- **Live demo (with content):** [MKaufeld.github.io](https://MKaufeld.github.io/) *(the original site this template is based on)*
+- **Live:** [MKaufeld.github.io](https://MKaufeld.github.io/)
 
 ## Quick Start
 
