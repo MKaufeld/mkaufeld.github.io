@@ -2,55 +2,19 @@
 
 A clean, minimal, and fully responsive single-page personal website template — ideal for researchers, academics, and developers who want to share their publications, projects, and talks online.
 
-- **Live demo (with content):** [korbinianmoller.github.io](https://korbinianmoller.github.io/) *(the original site this template is based on)*
-- **Live demo of the empty template:** [Try it yourself!](https://korbinianmoller.github.io/personal_website_template/)
 
----
-
-## Features
-
-- **Zero build step** — pure HTML, CSS, and vanilla JavaScript. Just edit and deploy.
-- **Responsive** — looks great on desktop, tablet, and mobile.
-- **Sticky navigation bar** — with a hamburger menu on small screens.
-- **Publication cards with modals** — each paper gets a full-detail popup with abstract, authors, venue, links, and a one-click BibTeX copy button.
-- **Badge system** — mark papers or talks as `RECENTLY PUBLISHED` or `UPCOMING` with a single CSS class.
-- **Smooth scrolling** — custom eased scroll animation for all anchor links.
-- **Scroll-to-top button** — appears automatically after scrolling, adapts color in the footer zone.
-- **Auto-updating copyright year** — the footer year is set by JavaScript, so it stays current.
-- **No dependencies** — only CDN-loaded Google Fonts and Font Awesome (no npm, no bundler).
-- **Easy theming** — all colors are defined as CSS variables in `styles.css`.
-
----
 
 ## Quick Start
 
-### 1. Use this template
+### 1. Clone this template
 
-Click **Use this template** on GitHub (or fork/clone this repository):
 
 ```bash
 git clone https://github.com/korbinianmoller/personal_website_template.git my-website
 cd my-website
 ```
 
-### 2. Customize `index.html`
-
-Open `index.html` in any text editor. Every section that needs your input is marked with a `<!-- CUSTOMIZE: ... -->` comment. Work through them top to bottom:
-
-| What to change | Where to find it |
-|---|---|
-| Page title & meta description | `<head>` section, top of file |
-| Nav bar name & links | `<nav class="site-nav">` block |
-| Your name & tagline | Hero section (`<header class="hero">`) |
-| Social links (LinkedIn, Email, etc.) | Hero section & About section |
-| Bio text | About section |
-| Publication cards | Publications section |
-| Publication modals (abstract, BibTeX, …) | Modal blocks below the publications section |
-| Project cards | Projects section |
-| Talk / teaching cards | Talks section |
-| Footer name & copyright | Footer element |
-
-### 3. Replace your profile photo
+### 2. Replace your profile photo
 
 Add your photo to the `images/` folder and update the `<img>` tag in the hero section:
 
@@ -60,7 +24,7 @@ Add your photo to the `images/` folder and update the `<img>` tag in the hero se
 
 Any common web image format works (`.jpg`, `.png`, `.webp`). The image is cropped to a circle — a square photo with your face centered works best.
 
-### 4. Add your papers (optional)
+### 3. Add your papers (optional)
 
 For each publication:
 
@@ -69,7 +33,7 @@ For each publication:
 3. Place the PDF in the `paper/` folder and link to it, or link to an external URL.
 4. Place the teaser image in `images/` and reference it in the modal.
 
-### 5. Deploy to GitHub Pages
+### 4. Deploy to GitHub Pages
 
 1. Push your repository to GitHub.
 2. Go to **Settings → Pages**.
@@ -134,19 +98,6 @@ The sticky navigation bar is included by default. There are two ways to disable 
 
 To customize the links shown in the nav, edit the `<ul class="nav-links">` list and keep the `href` values in sync with the `id` attributes on each `<section>`.
 
----
-
-## Card Badge Reference
-
-Add a CSS class to the `<article>` element to show a status badge:
-
-| Class | Badge shown |
-|---|---|
-| `class="card"` | No badge |
-| `class="card new"` | `RECENTLY PUBLISHED` (blue) |
-| `class="card upcoming"` | `UPCOMING` (blue) |
-
----
 
 ## Disclaimer
 
@@ -157,22 +108,10 @@ This template was built for personal use and shared as-is for anyone who finds i
 - The template loads Font Awesome and Google Fonts from third-party CDNs — if you have strict privacy or content-security requirements, you may want to self-host those assets.
 - No active maintenance or issue support is promised.
 
-Use it as a starting point, adapt it freely, and fix what does not fit your needs.
-
-That said, if you spot a bug, have an idea for an improvement, or want to contribute a fix, feel free to open an issue or submit a pull request — contributions are always welcome. You can also reach out directly via the contact details on [korbinianmoller.github.io](https://korbinianmoller.github.io/).
-
----
-
 ## License
 
 This template is released under the **MIT License** — see [LICENSE](LICENSE) for details.
 You are free to use, modify, and distribute it for any purpose, personal or commercial.
 A credit in the footer is appreciated.
 
----
 
-## Credits
-
-Template designed and originally developed by **Korbinian Moller**.
-
-- Original site: [korbinianmoller.github.io](https://korbinianmoller.github.io/)
