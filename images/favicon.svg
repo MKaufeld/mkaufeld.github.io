@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <!-- Rounded-square background -->
+  <rect width="512" height="512" rx="96" fill="#1f2937"></rect>
+
+  <!-- Centered rounded MK monogram -->
+  <g transform="translate(20 0)" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Wider M -->
+    <path d="
+      M 65 375
+      V 137
+      L 148 375
+      L 231 137
+      V 375
+    "></path>
+
+    <!-- Narrower K -->
+    <path d="
+      M 291 137
+      V 375
+    "></path>
+
+    <path d="
+      M 291 258
+      L 407 137
+    "></path>
+
+    <path d="
+      M 291 258
+      L 407 375
+    "></path>
+
+  </g>
+</svg>
