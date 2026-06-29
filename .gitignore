@@ -1,0 +1,16 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jekyll (in case GitHub Pages runs Jekyll pre-processing)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile
+Gemfile.lock

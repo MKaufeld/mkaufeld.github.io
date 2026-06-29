@@ -1,0 +1,719 @@
+/*
+ * styles.css
+ *
+ * This stylesheet provides the visual appearance of the personal website template.
+ * It defines a colour palette using CSS custom properties, configures typography and layout,
+ * and implements responsive behaviour using flexible grids and media queries.
+ *
+ * THEMING: To change the colour scheme, edit the CSS variables in :root below.
+ */
+
+/* ─── Colour palette ────────────────────────────────────────────────────────
+   All colours are defined here as CSS custom properties so you only need to
+   edit this one block to retheme the entire site.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+    --color-primary:        #374151;   /* gray-700  — headings, outline buttons     */
+    --color-secondary:      #2563eb;   /* blue-600  — highlights, card titles       */
+    --color-accent:         #1d4ed8;   /* blue-700  — darker blue accent            */
+    --color-dark:           #1f2937;   /* gray-800  — footer, dark buttons          */
+    --color-light:          #ffffff;
+    --color-bg-hero:        #f9fafb;   /* gray-50   — hero section background       */
+    --color-bg-light:       #ffffff;
+    --color-bg-pubs:        #f3f4f6;   /* gray-100  — publications background       */
+    --color-bg-projects:    #ffffff;
+    --color-bg-talks:       #f3f4f6;   /* gray-100  — talks section background      */
+    --color-bg-card-dark:   #f3f4f6;   /* gray-100  — dark-variant card background  */
+    --container-width:      1200px;
+    --gutter:               1.5rem;
+}
+
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+/* Smooth anchor scrolling for whole page */
+html {
+    scroll-behavior: auto;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+p {
+    margin: 0.5rem 0 1rem;
+}
+
+/* ─── Sticky navigation bar ─────────────────────────────────────────────── */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-light);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+}
+
+.nav-brand:hover {
+    color: var(--color-secondary);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.75rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-secondary);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 0.4rem 0 0.6rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.55rem var(--gutter);
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+}
+
+/* ─── Container ─────────────────────────────────────────────────────────── */
+/* Container to centre content and apply horizontal padding */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--color-bg-hero);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 10%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.hero-text .tagline {
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+/* for buttons in the hero section */
+.hero-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+/* about section */
+.about {
+    background-color: var(--color-bg-light);
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.section-intro {
+    max-width: 1000px;
+    margin: 0.5rem auto 2rem;
+    text-align: justify;
+    color: #555;
+}
+
+.link-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    color: var(--color-light);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn i {
+    font-size: 1.0rem;
+}
+
+.btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+}
+
+.btn-dark {
+    background-color: var(--color-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.05);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* Section shared styles */
+.publications, .experience, .talks {
+    padding: 4rem 0;
+}
+
+.publications {
+    background-color: var(--color-bg-pubs);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.experience {
+    background-color: var(--color-bg-projects);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.talks {
+    background-color: var(--color-bg-talks);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.publications h2, .experience h2, .talks h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--color-light);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.dark {
+    background-color: var(--color-bg-card-dark);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.card p {
+    flex-grow: 1;
+    color: #555;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.card > .btn,
+.card-actions > .btn {
+    min-width: 150px;
+    justify-content: center;
+}
+
+.talks .card-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.talks .card > .btn,
+.talks .card-actions > .btn {
+    width: 100%;
+    min-width: 0;
+}
+
+.card.upcoming, .card.new {
+    border: 2px solid var(--color-secondary);
+    position: relative;
+}
+
+.card.upcoming::before, .card.new::before {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: var(--color-secondary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.card.new::before {
+    content: "RECENTLY PUBLISHED";
+}
+
+
+.card.upcoming::before {
+    content: "UPCOMING";
+}
+
+.timeline {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.timeline-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.timeline-time {
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding-top: 0.5rem;
+}
+
+.timeline-logo {
+    width: 110px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-logo img {
+    max-width: 100%;
+    max-height: 42px;
+    object-fit: contain;
+}
+
+.timeline-logo.timeline-logo-large {
+    width: 126px;
+    min-height: 50px;
+}
+
+.timeline-logo.timeline-logo-large img {
+    max-height: 50px;
+}
+
+.timeline-card {
+    background-color: var(--color-light);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1.75rem;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.timeline-card h3 {
+    margin: 0 0 0.35rem 0;
+    color: var(--color-secondary);
+}
+
+.timeline-place {
+    margin: 0 0 0.85rem 0;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.timeline-card p:last-child {
+    margin-bottom: 0;
+}
+
+.talk-card-logo {
+    display: flex;
+    align-items: center;
+    min-height: 2.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.talk-card-logo img {
+    max-width: 110px;
+    max-height: 2.4rem;
+    object-fit: contain;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 2000;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: relative;
+    width: min(1400px, calc(100vw - 5rem));
+    max-height: min(95vh, 1100px);
+    overflow: auto;
+    background: var(--color-light);
+    border-radius: 0.9rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--color-dark);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+    background-color: var(--color-dark);
+    transform: scale(1.05);
+}
+
+.modal-close:hover i {
+    transform: rotate(90deg);
+    color: var(--color-light);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.modal-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.modal-body h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-body h4 {
+    margin-bottom: 0.1rem;
+}
+
+.modal-authors,
+.modal-venue {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-abstract {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+}
+
+.bibtex-block {
+    margin-top: 1.5rem;
+}
+
+.bibtex-block h4 {
+    margin-bottom: 0.75rem;
+}
+
+.bibtex-wrapper {
+    position: relative;
+}
+
+.bibtex-wrapper pre {
+    margin: 0;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    padding-top: 3.2rem;
+    background: var(--color-dark);
+    color: #e2e8f0;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.bibtex-wrapper code {
+    display: block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    white-space: pre;
+}
+
+.copy-bibtex-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.78rem;
+    z-index: 10;
+    border: 1px solid var(--color-light);
+}
+
+.copy-bibtex-btn:hover {
+    border-color: var(--color-light);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.page-up-btn {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 1500;
+}
+
+.page-up-btn.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.page-up-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-secondary);
+}
+
+.page-up-btn.in-footer {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.page-up-btn.in-footer:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+
+.page-up-btn i {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .timeline-meta {
+        gap: 0.4rem;
+    }
+
+    .timeline-time {
+        padding-top: 0;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-image img {
+        width: 160px;
+        height: 160px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 0.6rem 1rem;
+    }
+}

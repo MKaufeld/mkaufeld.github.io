@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================================================
+         CUSTOMIZE: Update the title and meta description below.
+         ========================================================= -->
+    <title>Marc Kaufeld | Personal Website</title>
+    <meta name="description" content="Personal website of Marc Kaufeld, PhD at the AVS Lab, TU Munich, focusing on Motion Planning for Autonomous Vehicles under Incomplete World Knowledge. Explore publications, projects, and more.">
+    <meta name="robots" content="index, follow">
+    <!-- CUSTOMIZE: Set your GitHub Pages URL here -->
+    <link rel="canonical" href="https://MKaufeld.github.io/">
+
+    <!-- Open Graph tags for social sharing previews -->
+    <meta property="og:title" content="Marc Kaufeld | Personal Website">
+    <meta property="og:description" content="Personal website of Marc Kaufeld, PhD at the AVS Lab, TU Munich, focusing on Motion Planning for Autonomous Vehicles under Incomplete World Knowledge. Explore publications, projects, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://MKaufeld.github.io/">
+    <meta property="og:image" content="https://MKaufeld.github.io/images/profile.jpg">
+
+    <!-- Import Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Import Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CUSTOMIZE: match this to --color-dark in styles.css for mobile browser chrome -->
+    <meta name="theme-color" content="#1f2937">
+</head>
+<body>
+
+    <!-- =========================================================
+         NAVIGATION BAR
+         Sticky top nav with your name and section links.
+         CUSTOMIZE: Update the brand name and links to match your sections.
+
+         To DISABLE the nav bar, add the hidden attribute:
+           <nav class="site-nav" id="site-nav" hidden>
+         Or delete this entire <nav>…</nav> block.
+         ========================================================= -->
+    <nav class="site-nav" id="site-nav">
+        <div class="container nav-container">
+            <!-- CUSTOMIZE: Replace with your name -->
+            <a href="#" class="nav-brand">Marc Kaufeld</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#talks">Talks</a></li>
+                <li><a href="#experience">Experience</a></li>
+                
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- =========================================================
+         HERO SECTION
+         Introduces you with a photo, name, tagline, and links.
+         ========================================================= -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-image">
+                <!-- CUSTOMIZE: Replace with your own photo in the images/ folder.
+                     Any format works (.jpg, .png, .webp). A square photo with your
+                     face centered works best — it will be cropped to a circle. -->
+                <img src="images/profile.jpg" alt="Profile picture">
+            </div>
+            <div class="hero-text">
+                <!-- CUSTOMIZE: Replace with your name and tagline. -->
+                <h1>Marc Kaufeld</h1>
+                <p class="tagline">Advancing autonomous-vehicle motion planning under uncertain world models.</p>
+
+                <div class="hero-links">
+                    <!-- CUSTOMIZE: Add/remove/update the links below. -->
+                    <a href="https://www.linkedin.com/in/marc-kaufeld/" class="btn btn-secondary" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:marc.kaufeld@tum.de" class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                    <!-- Uncomment to add a CV link: -->
+                    <!-- <a href="/cv.pdf" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-lines"></i> CV
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         ABOUT SECTION
+         A brief bio and navigation buttons to other sections.
+         ========================================================= -->
+    <section class="about">
+        <div class="container">
+            <h2>About me</h2>
+
+            <!-- CUSTOMIZE: Write your bio here. -->
+            <p class="section-intro">
+                Welcome to my personal website. It provides a brief introduction to me and the current state of my PhD research.
+            </p>
+            <p class="section-intro">
+                I am a researcher at the Technical University of Munich (TUM), working on motion planning for autonomous vehicles. 
+                My work focuses on robust planning under imperfect world knowledge, combining uncertainty-aware risk assessment with hybrid motion planning approaches.
+            </p>
+            <ul class="section-intro">
+                <li>Uncertainty-aware collision prediction and risk estimation</li>
+                <li>Learned motion primitives for autonomous-vehicle planning</li>
+                <li>Multi-agent simulation and robust closed-loop planner validation</li>
+            </ul>
+            <!-- <p class="section-intro">
+                The website presents my publications, research projects, open-source work, 
+                and professional profiles, and will be updated as the research progresses.
+            </p> -->
+
+            <div class="link-buttons">
+                <!-- Internal navigation buttons -->
+                <a href="#publications" class="btn btn-dark">
+                    <i class="fa-solid fa-book"></i> Publications
+                </a>
+                <a href="#talks" class="btn btn-dark">
+                    <i class="fa-solid fa-microphone"></i> Talks &amp; More
+                </a>
+             <a href="#experience" class="btn btn-dark">
+                    <i class="fa-solid fa-user-graduate"></i> Education &amp; Experience
+                </a>
+                <!-- CUSTOMIZE: External profile links -->
+                <a href="https://github.com/MKaufeld" class="btn btn-dark" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <!-- <a href="https://scholar.google.com/citations?user=XXXXXXXX" class="btn btn-dark" target="_blank">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                </a>
+                <a href="https://orcid.org/0000-0000-0000-0000" class="btn btn-dark" target="_blank">
+                    <i class="fa-brands fa-orcid"></i> ORCID
+                </a> -->
+
+                <!-- Uncomment to add more links:
+                <a href="#" class="btn btn-dark">
+                    <i class="fa-brands fa-researchgate"></i> ResearchGate
+                </a> -->
+                <!-- <a href="#" class="btn btn-dark">
+                    <i class="fa-solid fa-file-pdf"></i> PhD Thesis
+                </a>  -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         PUBLICATIONS SECTION
+         List your papers as cards. Each card links to a modal
+         with the full details (abstract, authors, BibTeX, etc.).
+
+         HOW TO ADD A PUBLICATION:
+         1. Copy one <article class="card"> block below.
+         2. Update the title, summary, and data-modal-target ID.
+         3. Copy the matching modal block further down the page.
+         4. Update all fields in the modal (title, authors, abstract, links, BibTeX).
+
+         Card variants:
+           class="card"          → default
+           class="card new"      → shows "RECENTLY PUBLISHED" badge
+           class="card upcoming" → shows "UPCOMING" badge
+         ========================================================= -->
+    <section class="publications" id="publications">
+        <div class="container">
+            <h2>Publications</h2>
+            <p class="section-intro"></p>
+            <div class="card-grid">
+                <article class="card upcoming">
+                    <h3>G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</h3>
+                    <p><em>Yu et al.</em> – 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
+                        A grid-guided diffusion planner that injects dense safety and route-progress gradients during denoising for more robust closed-loop behavior.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper1">Details</a>
+                </article>
+
+                <article class="card new">
+                    <h3>Precise and Efficient Collision Prediction under Uncertainty in Autonomous Driving</h3>
+                    <p><em>Kaufeld and Betz</em> – 2026 IEEE International Conference on Robotics and Automation (ICRA).
+                        Presents two semi-analytic collision probability estimators for convex obstacles under full state uncertainty with real-time performance.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper2">Details</a>
+                </article>
+
+                <article class="card">
+                    <h3>DualAD: Dual-Layer Planning for Reasoning in Autonomous Driving</h3>
+                    <p><em>Wang et al.</em> – 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
+                        Combines a rule-based motion planner with an LLM-based reasoning layer that intervenes in critical situations during closed-loop driving.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper6">Details</a>
+                </article>
+
+                <article class="card">
+                    <h3>MP-RBFN: Learning-based Vehicle Motion Primitives using Radial Basis Function Networks</h3>
+                    <p><em>Kaufeld et al.</em> – 2025 IEEE Intelligent Transportation Systems Conference (ITSC).
+                        Learns high-fidelity motion primitives with radial basis function networks to bridge efficient sampling and accurate vehicle dynamics.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper3">Details</a>
+                </article>
+
+                <article class="card">
+                    <h3>MultiDrive: A Co-Simulation Framework Bridging 2D and 3D Driving Simulation for AV Software Validation</h3>
+                    <p><em>Kaufeld et al.</em> – 2025 IEEE Intelligent Transportation Systems Conference (ITSC).
+                        Connects low- and high-fidelity simulators to streamline scenario transfer, large-scale testing, and deeper validation of motion planners.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper4">Details</a>
+                </article>
+
+                <article class="card">
+                    <h3>Investigating Driving Interactions: A Robust Multi-Agent Simulation Framework for Autonomous Vehicles</h3>
+                    <p><em>Kaufeld et al.</em> – 2024 IEEE Intelligent Vehicles Symposium (IV).
+                        Introduces a synchronous multi-agent simulation setup for interactive edge-case driving scenarios and planner evaluation.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper5">Details</a>
+                </article>
+
+                <article class="card">
+                    <h3>Learning and Adapting Behavior of Autonomous Vehicles through Inverse Reinforcement Learning</h3>
+                    <p><em>Trauth et al.</em> – IEEE Intelligent Vehicles Symposium (IV), 2023.
+                        Uses inverse reinforcement learning on real-world highway data to model and adapt autonomous-vehicle driving style and risk-taking behavior.</p>
+                    <a href="#" class="btn btn-outline" type="button" data-modal-target="pub-modal-paper7">Details</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         PUBLICATION MODALS
+         One modal per publication card above. Match the id="" to
+         the data-modal-target="" on the card's button.
+         ========================================================= -->
+
+    <!-- Modal for Paper 1 -->
+    <div class="modal-overlay" id="pub-modal-paper1" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper1-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper1-teaser.png" alt="Publication illustration for G2DP">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper1-title">
+                        G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance
+                    </h3>
+                    <p class="modal-authors">
+                        Hang Yu, Ye Jin, Alessandro Canevaro, Julian Schmidt, Julian Jordan, Peizheng Li, <b>Marc Kaufeld</b>, Silvan Lindner, Johannes Betz, Wilhelm Stork
+                    </p>
+                    <p class="modal-venue">
+                        2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2606.26017" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://arxiv.org/abs/2606.26017" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> arXiv
+                        </a>
+                        <a href="" class="btn btn-outline disabled" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper1">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper1">@inproceedings{yu2026g2dp,
+  author  = {Yu, Hang and Jin, Ye and Canevaro, Alessandro and Schmidt, Julian and Jordan, Julian and Li, Peizheng and Kaufeld, Marc and Lindner, Silvan and Betz, Johannes and Stork, Wilhelm},
+  title   = {G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance},
+  booktitle = {2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 2 -->
+    <div class="modal-overlay" id="pub-modal-paper2" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper2-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper2-teaser.png" alt="Publication illustration for collision prediction paper">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper2-title">
+                        Precise and Efficient Collision Prediction under Uncertainty in Autonomous Driving
+                    </h3>
+                    <p class="modal-authors">
+                        <b>Marc Kaufeld</b>, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2026 IEEE International Conference on Robotics and Automation (ICRA), 2026
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        This paper presents two efficient methods to estimate the collision risk of planned trajectories in autonomous driving under uncertain driving conditions. Deterministic collision checks of planned trajectories are often inaccurate or overly conservative, as noisy perception, localization errors, and uncertain predictions of other traffic participants introduce significant uncertainty into the planning process. We derive two semi-analytic methods to compute the collision probability of planned trajectories with arbitrary convex obstacles. The first approach evaluates the probability of spatial overlap between an autonomous vehicle and surrounding obstacles, while the second estimates the collision probability based on stochastic boundary crossings. Both formulations incorporate full state uncertainties, including position, orientation, and velocity, and achieve high accuracy at computational costs suitable for real-time planning. Simulation studies verify that the proposed methods closely match Monte Carlo results while providing significant runtime advantages, enabling their use in risk-aware trajectory planning.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2510.05729" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://github.com/TUM-AVS/Collision-Probability-Estimation" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                        <a href="https://arxiv.org/abs/2510.05729" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> arXiv
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper2">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper2">@inproceedings{kaufeld2026collision,
+  author  = {Kaufeld, Marc and Betz, Johannes},
+  title   = {Precise and Efficient Collision Prediction under Uncertainty in Autonomous Driving},
+  booktitle = {2026 IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2026},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 3 -->
+    <div class="modal-overlay" id="pub-modal-paper3" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper3-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper3-teaser.png" alt="Publication illustration for MP-RBFN">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper3-title">
+                        MP-RBFN: Learning-based Vehicle Motion Primitives using Radial Basis Function Networks
+                    </h3>
+                    <p class="modal-authors">
+                        <b>Marc Kaufeld</b>, Mattia Piccinini, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2025 IEEE Intelligent Transportation Systems Conference (ITSC), 2025
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        This paper introduces MP-RBFN, a learning-based formulation for efficient motion primitive generation in autonomous driving. Traditional optimization-based approaches provide high accuracy but are often computationally expensive, while sampling-based methods are efficient yet impose restrictive assumptions on trajectory geometry. MP-RBFN combines these strengths by using radial basis function networks to learn high-fidelity motion primitives derived from optimal control problems while preserving an accurate description of vehicle dynamics. Experiments show substantially improved accuracy compared with existing semi-analytic approaches at low inference times, achieving a sevenfold gain in precision for optimized motion primitive generation. The method is further integrated into a sampling-based trajectory planner to demonstrate practical applicability.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2507.10047" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://github.com/TUM-AVS/RBFN-Motion-Primitives" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/11423753" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> IEEE
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper3">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper3">@inproceedings{kaufeld2025mprbfn,
+  author  = {Kaufeld, Marc and Piccinini, Mattia and Betz, Johannes},
+  title   = {MP-RBFN: Learning-based Vehicle Motion Primitives using Radial Basis Function Networks},
+  booktitle = {2025 IEEE Intelligent Transportation Systems Conference (ITSC)},
+  year      = {2025},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 4 -->
+    <div class="modal-overlay" id="pub-modal-paper4" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper4-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper4-teaser.png" alt="Publication illustration for MultiDrive">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper4-title">
+                        MultiDrive: A Co-Simulation Framework Bridging 2D and 3D Driving Simulation for AV Software Validation
+                    </h3>
+                    <p class="modal-authors">
+                        <b>Marc Kaufeld</b>, Korbinian Moller, Alessio Gambi, Paolo Arcaini, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2025 IEEE Intelligent Transportation Systems Conference (ITSC), 2025
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        Scenario-based testing in simulation is central to autonomous vehicle software validation, but existing workflows often force developers to choose between scalable low-fidelity 2D simulators and more realistic high-fidelity 3D simulators. MultiDrive addresses this tradeoff with a co-simulation framework that bridges both worlds through multi-agent coordination and procedural scenario generation. The framework reduces the effort needed to transfer scenarios between simulators while automating experiment execution, trajectory analysis, and visualization. Evaluations with a reference motion planner show that the approach reveals discrepancies between intended and actual behavior, exposing planning weaknesses that only emerge under more realistic simulation conditions.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2505.13959" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://github.com/TUM-AVS/MultiDrive" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/11423490" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> IEEE
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper4">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper4">@inproceedings{kaufeld2025multidrive,
+  author  = {Kaufeld, Marc and Moller, Korbinian and Gambi, Alessio and Arcaini, Paolo and Betz, Johannes},
+  title   = {MultiDrive: A Co-Simulation Framework Bridging 2D and 3D Driving Simulation for AV Software Validation},
+  booktitle = {2025 IEEE Intelligent Transportation Systems Conference (ITSC)},
+  year      = {2025},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 5 -->
+    <div class="modal-overlay" id="pub-modal-paper5" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper5-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper5-teaser.png" alt="Publication illustration for driving interactions framework">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper5-title">
+                        Investigating Driving Interactions: A Robust Multi-Agent Simulation Framework for Autonomous Vehicles
+                    </h3>
+                    <p class="modal-authors">
+                        <b>Marc Kaufeld</b>, Rainer Trauth, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2024 IEEE Intelligent Vehicles Symposium (IV), 2024
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        Current validation methods often rely on recorded data and basic functional checks, which may not be sufficient to encompass the scenarios an autonomous vehicle might encounter. In addition, there is a growing need for complex scenarios with changing vehicle interactions for comprehensive validation. This work introduces a novel synchronous multi-agent simulation framework for autonomous vehicles in interactive scenarios. The approach creates interactive scenarios and incorporates publicly available edge-case scenarios wherein simulated vehicles are replaced by agents navigating to predefined destinations. The framework enables the integration of different autonomous driving planning methodologies and includes a set of evaluation metrics to assess autonomous driving behavior. Experiments explore different planning setups and simulation complexities to study adaptability and performance, highlighting the importance of simulating vehicle interactions for advanced autonomous driving research and validation.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2402.04720" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://github.com/TUM-AVS/Frenetix-Motion-Planner" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10588423" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> IEEE
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper5">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper5">@inproceedings{kaufeld2024driving,
+  author  = {Kaufeld, Marc and Trauth, Rainer and Betz, Johannes},
+  title   = {Investigating Driving Interactions: A Robust Multi-Agent Simulation Framework for Autonomous Vehicles},
+  booktitle = {2024 IEEE Intelligent Vehicles Symposium (IV)},
+  year      = {2024},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 6 -->
+    <div class="modal-overlay" id="pub-modal-paper6" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper6-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper6-teaser.png" alt="Publication illustration for DualAD">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper6-title">
+                        DualAD: Dual-Layer Planning for Reasoning in Autonomous Driving
+                    </h3>
+                    <p class="modal-authors">
+                        Dingrui Wang, <b>Marc Kaufeld</b>, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        We present a novel autonomous driving framework, DualAD, designed to imitate human reasoning during driving. DualAD comprises two layers: a rule-based motion planner at the bottom layer that handles routine driving tasks requiring minimal reasoning, and an upper layer featuring a rule-based text encoder that converts driving scenarios from absolute states into text description. This text is then processed by a large language model to make driving decisions. The upper layer intervenes in the bottom layer's decisions when potential danger is detected, mimicking human reasoning in critical situations. Closed-loop experiments demonstrate that DualAD, using a zero-shot pre-trained model, significantly outperforms both rule-based and learning-based motion planners when interacting with reactive agents.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://arxiv.org/pdf/2409.18053" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11246084/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> IEEE
+                        </a>
+                        <a href="https://github.com/TUM-AVS/DualAD" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper6">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper6">@inproceedings{wang2025dualad,
+  author    = {Wang, Dingrui and Kaufeld, Marc and Betz, Johannes},
+  title     = {DualAD: Dual-Layer Planning for Reasoning in Autonomous Driving},
+  booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {12057--12063},
+  year      = {2025},
+  publisher = {IEEE},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Paper 7 -->
+    <div class="modal-overlay" id="pub-modal-paper7" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pub-modal-paper7-title">
+            <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="images/paper7-teaser.png" alt="Publication illustration for inverse reinforcement learning paper">
+                </div>
+                <div class="modal-body">
+                    <h3 id="pub-modal-paper7-title">
+                        Learning and Adapting Behavior of Autonomous Vehicles through Inverse Reinforcement Learning
+                    </h3>
+                    <p class="modal-authors">
+                        Rainer Trauth, <b>Marc Kaufeld</b>, Maximilian Geisslinger, Johannes Betz
+                    </p>
+                    <p class="modal-venue">
+                        2023 IEEE Intelligent Vehicles Symposium (IV), 2023
+                    </p>
+                    <h4>Abstract</h4>
+                    <p class="modal-abstract">
+                        The driving behavior of autonomous vehicles has a significant impact on safety for all traffic participants. Unlike current traffic participants, autonomous vehicles in the future will also need to adhere to safety standards and defined risk properties in order to achieve a high level of public acceptance. At the same time, successful autonomous vehicles must be able to interact with human drivers in mixed traffic in a way that enables traffic to flow. In this paper, we present a hybrid approach to trajectory planning that learns and adapts human driving behavior using inverse reinforcement learning. The proposed approach performs a large-scale simulation with HighD real-world scenarios to learn human driving behavior and domain-specific traffic-flow characteristics. The analysis of the work focuses on the influence of risk-taking, which provides information about driving style safety.
+                    </p>
+                    <div class="modal-links">
+                        <a href="https://www.researchgate.net/profile/Johannes-Betz-3/publication/372707722_Learning_and_Adapting_Behavior_of_Autonomous_Vehicles_through_Inverse_Reinforcement_Learning/links/64c6e3662b7d551924808b51/Learning-and-Adapting-Behavior-of-Autonomous-Vehicles-through-Inverse-Reinforcement-Learning.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10186668/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-link"></i> IEEE
+                        </a>
+                        <a href="" class="btn btn-outline disabled" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-code"></i> Code
+                        </a>
+                    </div>
+                    <div class="bibtex-block">
+                        <h4>BibTeX</h4>
+                        <div class="bibtex-wrapper">
+                            <a href="#" class="btn btn-dark copy-bibtex-btn" type="button" data-copy-target="bibtex-paper7">
+                                Copy
+                            </a>
+<pre><code id="bibtex-paper7">@inproceedings{trauth2023learning,
+  author    = {Trauth, Rainer and Kaufeld, Marc and Geisslinger, Maximilian and Betz, Johannes},
+  title     = {Learning and Adapting Behavior of Autonomous Vehicles through Inverse Reinforcement Learning},
+  booktitle = {2023 IEEE Intelligent Vehicles Symposium (IV)},
+  pages     = {1--8},
+  year      = {2023},
+  publisher = {IEEE},
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         TALKS, TEACHING & MORE SECTION
+         List conference presentations, invited talks, teaching
+         activities, workshops, media coverage, and similar items.
+
+         HOW TO ADD AN ENTRY:
+         Copy one <article class="card"> block and update the
+         title, location, description, and link.
+         ========================================================= -->
+    <section class="talks" id="talks">
+        <div class="container">
+            <h2>Talks, Teaching &amp; More</h2>
+            <p class="section-intro">
+                Conference presentations, invited talks, teaching activities, and more.
+            </p>
+
+            <div class="card-grid">
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-icra.svg" alt="ICRA logo">
+                    </div> -->
+                    <h3>ICRA 2026</h3>
+                    <p><em>Vienna, Austria, 2026</em></p>
+                    <p>Presentation on uncertainty-aware collision prediction for autonomous driving, focusing on efficient probability estimation methods that remain practical for closed-loop planning.</p>
+                    <div class="card-actions">
+                        <a href="https://arxiv.org/abs/2510.05729" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            Collision Prediction
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-itsc.svg" alt="ITSC logo">
+                    </div> -->
+                    <h3>ITSC 2025</h3>
+                    <p><em>Gold Coast, Australia, 2025</em></p>
+                    <p>Presentations on learned motion primitives and cross-simulator validation workflows for autonomous driving.</p>
+                    <div class="card-actions">
+                        <a href="https://ieeexplore.ieee.org/document/11423753" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            MP-RBFN
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/11423490" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            MultiDrive
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-itsc.svg" alt="ITSC logo">
+                    </div> -->
+                    <h3>ITSC 2025 Workshops</h3>
+                    <p><em>Gold Coast, Australia, 2025</em></p>
+                    <p>Presentations about the current research at the CommonRoad Motion Planning Competition & Traffic Rule-Compliant Autonomous Driving Workshop and the Interaction-driven Behavior Prediction and Planning Workshop at ITSC 2025.</p>
+                    <div class="card-actions">
+                        <a href="https://commonroad.in.tum.de/competition/2025/announcement" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            CommonRoad
+                        </a>
+                        <a href="https://interactions_workshop.gitlab.io/itsc2025.html" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            Interactions Workshop
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-iv.svg" alt="IV logo">
+                    </div> -->
+                    <h3>IV 2024</h3>
+                    <p><em>Jeju Island, South Korea, 2024</em></p>
+                    <p>Presentations on multi-agent simulation for interactive driving scenarios and reinforcement-learning-boosted motion planning with strong generalization performance in autonomous driving.</p>
+                    <div class="card-actions">
+                        <a href="https://ieeexplore.ieee.org/document/10588423" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            Multi-Agent Simulation
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10588750" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            Frenetix RL
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-tum-badge.svg" alt="TUM logo">
+                    </div> -->
+                    <h3>Lecture: Motion Planning and Decision Making for Mobile Robots</h3>
+                    <p><em>Technical University of Munich</em></p>
+                    <p>Lecture on motion planning algorithms for autonomous vehicles, covering sampling-based trajectory planning, decision making in dynamic environments, and safety-critical planning.</p>
+                    <a href="https://www.mos.ed.tum.de/avs/lehre/autonomous-vehicles-motion-planning-decision-making/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        Course Information
+                    </a>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-tum-badge.svg" alt="TUM logo">
+                    </div> -->
+                    <h3>Lecture: Autonome Fahrzeuge und Verkehrsmittel</h3>
+                    <p><em>Technical University of Munich</em></p>
+                    <p>Contributing lecturer for the lecture series on autonomous vehicles and transportation systems about fundamental concepts of autonomous driving; recognized with a best lecturer award.</p>
+                    <a href="https://www.mos.ed.tum.de/avs/lehre/autonome-fahrzeuge-und-verkehrsmittel/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        Course Information
+                    </a>
+                </article>
+
+                <article class="card">
+                    <!-- <div class="talk-card-logo">
+                        <img src="images/logo-avs-badge.svg" alt="AVS logo">
+                    </div> -->
+                    <h3>Research Software Contributions</h3>
+                    <p><em>TUM-AVS Ecosystem</em></p>
+                    <p>Open-source contributions spanning Frenetix, MultiDrive, motion primitives, collision-probability estimation, and related tooling for autonomous-driving research and validation.</p>
+                    <a href="https://github.com/TUM-AVS" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        GitHub Organization
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         EDUCATION & EXPERIENCE SECTION
+         A compact timeline-style overview inspired by the reference
+         site, adapted to the visual language of this page.
+         ========================================================= -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2>Education &amp; Experience</h2>
+            <p class="section-intro">
+                A short overview of my current academic role and research environment.
+            </p>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2023 - Present</div>
+                        <div class="timeline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich logo">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>PhD Researcher in Autonomous Vehicle Systems</h3>
+                        <p class="timeline-place">Technical University of Munich (TUM), AVS Lab</p>
+                        <p>
+                            Conducting doctoral research on motion planning for autonomous vehicles under incomplete and uncertain world models
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2021 - 2022</div>
+                        <div class="timeline-logo">
+                            <img src="images/logo-man.png" alt="MAN logo" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Working Student in the Department Network Optimization and Costs Inbound</h3>
+                        <p class="timeline-place">MAN Truck & Bus SE, Munich</p>
+                        <p>
+                            	Transport cost optimization and logistics cost calculation.
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2020 - 2023</div>
+                        <div class="timeline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich logo">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Master in Development, Production and Management in Mechanical Engineering</h3>
+                        <p class="timeline-place">Technical University of Munich (TUM)</p>
+                        <p>
+                            Final Thesis: “Modeling Human Driving Behavior from Real Driving Data using Inverse Reinforcement Learning”
+
+                            Lecture Focus: Autonomous Driving, Artificial Intelligence, Optimization 
+                        </p>
+                    </div>
+                </article>
+                <!-- <article class="timeline-item">
+                    <div class="timeline-time">2020 - 2021</div>
+                    <div class="timeline-card">
+                        <h3>Scientific Assistant at the Department for Production and Supply Chain Management,</h3>
+                        <p class="timeline-place"> Technical University of Munich (TUM), Department for Production and Supply Chain Management</p>
+                        <p>
+                            	Support for thelecture “Modelling, Optimization and Simulation in Operations Management”
+                        </p>
+                    </div>
+                </article> -->
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2019 - 2021</div>
+                        <div class="timeline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich logo">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Master in Management</h3>
+                        <p class="timeline-place">Technical University of Munich (TUM)</p>
+                        <p>
+                            Final Thesis: “The Vehicle Routing Problem with Truck Platooning”
+
+                            Lecture Focus: Logistics, Intellectual Property, Optimization
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2019</div>
+                        <div class="timeline-logo timeline-logo-large">
+                            <img src="images/logo-airbus-helicopters.jpg" alt="Airbus Helicopters logo" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Internship at the Department Safety and Reliability at Airbus Helicopters</h3>
+                        <p class="timeline-place">Airbus Helicopters, Donauwörth</p>
+                        <p>
+                            Modelling and Analysis of the thermal behavior of Lithium batteries
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2019</div>
+                        <div class="timeline-logo timeline-logo-large">
+                            <img src="images/logo-northwestern.png" alt="Northwestern University seal" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Semester abroad at the Northwestern University</h3>
+                        <p class="timeline-place">Northwestern University, Evanston, USA</p>
+                        <p>
+                            Final Thesis: “The Vehicle Routing Problem with Truck Platooning”
+
+                            Lecture Focus: Public Speaking, Team Leadership, Accounting
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <div class="timeline-time">2019</div>
+                        <div class="timeline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich logo">
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Bachelor in Engineering Science</h3>
+                        <p class="timeline-place">Technical University of Munich (TUM)</p>
+                        <p>
+                            Final Thesis: “Isogeometric Analysis in the Boundary Method for Acoustics”
+
+                            Lecture Focus: General foundational studies in engineering
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <span id="footer-year"></span> Marc Kaufeld
+                 <!-- &nbsp;&bull;&nbsp; -->
+                <!-- Template by <a href="https://korbinianmoller.github.io" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Korbinian Moller</a> -->
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Scroll-to-top button -->
+    <button class="page-up-btn" id="page-up-btn" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- =========================================================
+         SCRIPTS — no customization needed below this line.
+         ========================================================= -->
+
+    <!-- Smooth scrolling for anchor links -->
+    <script>
+    (function () {
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function smoothScrollTo(targetY, duration) {
+            const startY = window.pageYOffset;
+            const diff = targetY - startY;
+            const startTime = performance.now();
+
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeInOutCubic(progress);
+                window.scrollTo(0, startY + diff * eased);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+
+            requestAnimationFrame(step);
+        }
+
+        window.smoothScrollToPageY = smoothScrollTo;
+
+        document.addEventListener("click", function (e) {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+
+            const href = link.getAttribute("href");
+            e.preventDefault();
+
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            const y = target.getBoundingClientRect().top + window.pageYOffset;
+            smoothScrollTo(y, 700);
+            history.replaceState(null, "", href);
+        });
+    })();
+    </script>
+
+    <!-- Modal open/close logic -->
+    <script>
+    document.querySelectorAll("[data-modal-target]").forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal-target");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add("open");
+                modal.setAttribute("aria-hidden", "false");
+                document.body.classList.add("modal-open");
+            }
+        });
+    });
+
+    document.querySelectorAll("[data-modal-close]").forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = button.closest(".modal-overlay");
+            if (modal) {
+                modal.classList.remove("open");
+                modal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("modal-open");
+            }
+        });
+    });
+
+    document.querySelectorAll(".modal-overlay").forEach(modal => {
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.classList.remove("open");
+                modal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("modal-open");
+            }
+        });
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            document.querySelectorAll(".modal-overlay.open").forEach(modal => {
+                modal.classList.remove("open");
+                modal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("modal-open");
+            });
+        }
+    });
+
+    // BibTeX copy button
+    document.querySelectorAll(".copy-bibtex-btn").forEach(button => {
+        button.addEventListener("click", async () => {
+            const targetId = button.getAttribute("data-copy-target");
+            const codeBlock = document.getElementById(targetId);
+            if (!codeBlock) return;
+            try {
+                await navigator.clipboard.writeText(codeBlock.textContent);
+                const originalText = button.textContent;
+                button.textContent = "Copied!";
+                setTimeout(() => { button.textContent = originalText; }, 1500);
+            } catch (error) {
+                console.error("Failed to copy BibTeX:", error);
+            }
+        });
+    });
+
+    // Scroll-to-top button
+    const pageUpButton = document.getElementById("page-up-btn");
+    const footerEl = document.querySelector("footer");
+
+    if (pageUpButton) {
+        const togglePageUpButton = () => {
+            pageUpButton.classList.toggle("show", window.scrollY > 300);
+            if (footerEl) {
+                const buttonRect = pageUpButton.getBoundingClientRect();
+                const footerRect = footerEl.getBoundingClientRect();
+                pageUpButton.classList.toggle("in-footer", buttonRect.bottom >= footerRect.top);
+            }
+        };
+        window.addEventListener("scroll", togglePageUpButton, { passive: true });
+        window.addEventListener("resize", togglePageUpButton);
+        togglePageUpButton();
+
+        pageUpButton.addEventListener("click", () => {
+            if (typeof window.smoothScrollToPageY === "function") {
+                window.smoothScrollToPageY(0, 700);
+            } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
+    }
+
+    // Auto-update footer year
+    const yearEl = document.getElementById("footer-year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks  = document.getElementById("nav-links");
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+        // Close menu when any nav link is clicked
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+    </script>
+
+</body>
+</html>
